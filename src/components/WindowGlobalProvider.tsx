@@ -36,11 +36,10 @@ export class WindowGlobalProvider extends React.PureComponent<Props, State> {
   };
 
   componentDidMount() {
-    Object.entries(this.props.windowGlobals).forEach(
-      ([stateName, windowGlobal]) => {
-        this.loadWindowGlobal(stateName, windowGlobal);
-      }
-    );
+    const { windowGlobals } = this.props;
+    for (const stateName in windowGlobals) {
+      this.loadWindowGlobal(stateName, windowGlobals[stateName]);
+    }
   }
 
   render() {

@@ -4,6 +4,7 @@
   "description": "Load scripts and consume whatever they inject to the global window",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
   "source": "src/index.ts",
   "files": [
     "dist"
