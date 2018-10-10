@@ -1,6 +1,6 @@
 {
   "name": "react-window-global-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load scripts and consume whatever they inject to the global window",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
