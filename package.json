@@ -1,0 +1,42 @@
+{
+  "name": "react-window-global-loader",
+  "version": "0.1.0",
+  "description": "Load scripts and consume whatever they inject to the global window",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmagrippis/react-window-global-loader"
+  },
+  "author": "Johnny Magrippis <j@magrippis.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "react"
+  ],
+  "scripts": {
+    "start": "microbundle --watch",
+    "build": "rm -rf dist && NODE_ENV=production microbundle",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "peer-dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "microbundle": "^0.6.0",
+    "prettier": "^1.14.3",
+    "standard-version": "^4.4.0",
+    "typescript": "^3.1.1"
+  }
+}
