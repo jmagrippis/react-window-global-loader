@@ -16,8 +16,17 @@ interface State {
   [name: string]: any;
 }
 
+function getInitialState({ windowGlobals }: Props): State {
+  const result = {};
+  for (const stateName in windowGlobals) {
+    const { name } = windowGlobals[stateName];
+    result[stateName] = window[name];
+  }
+  return result;
+}
+
 export class WindowGlobalProvider extends React.PureComponent<Props, State> {
-  state = {};
+  state = getInitialState(this.props);
 
   onWindowGlobalLoaded = (stateName: string, name: string) => () => {
     this.setState({ [stateName]: window[name] });
