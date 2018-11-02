@@ -22,7 +22,7 @@
   "scripts": {
     "start": "microbundle --watch",
     "build": "rm -rf dist && NODE_ENV=production microbundle",
-    "release": "standard-version"
+    "release": "yarn build && standard-version"
   },
   "dependencies": {
     "react": "^16.5.2",
