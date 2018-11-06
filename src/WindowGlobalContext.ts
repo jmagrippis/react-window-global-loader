@@ -1,3 +1,4 @@
 import * as React from 'react';
 
-export const { Provider, Consumer } = React.createContext({});
+export const Context = React.createContext({});
+export const { Provider, Consumer } = Context;
